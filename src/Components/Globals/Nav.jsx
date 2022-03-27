@@ -8,7 +8,7 @@ function Nav() {
       <div className="nav_items">
         {info.nav_items.map((item)=>{
           return(
-            <p className='nav_item'>
+            <p className={ item.title === ("Sign In/Up") ? 'nav_item block' : "nav_item"}>
               {item.title}
             </p>
           )

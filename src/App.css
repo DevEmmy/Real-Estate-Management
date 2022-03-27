@@ -27,3 +27,14 @@
 .nav_item:hover{
   text-decoration: underline;
 }
+
+.block{
+  border: 1px solid ;
+  padding: 10px 20px;
+  transition: .3s;
+}
+
+.block:hover{
+  background-color: black;
+  color: white;
+}

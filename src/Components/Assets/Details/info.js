@@ -14,12 +14,8 @@ export const info = {
             link : "/latest"
         },
         {
-            title : "Sign In",
+            title : "Sign In/Up",
             link : "/sign-in",
-        },
-        {
-            title: "Sign Up",
-            link : "/login",
         },
         
     ]
