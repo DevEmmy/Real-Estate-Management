@@ -1,4 +1,5 @@
 import img from "../Images/3..jpeg"
+import img_1 from "../Images/4.jpg"
 
 export const info = {
     name: 'King David Elite',
@@ -29,19 +30,24 @@ export const info = {
     categories : [
         {
             title : "Real Estate",
-            link : "/real-estate"
+            link : "/real-estate",
+            image : img_1
         },
         {
             title : "Cars",
-            link : "/cars"
+            link : "/cars",
+            image : img_1
         },
         {
             title : "Yatch",
-            link : "/yatch"
+            link : "/yatch",
+            image : img_1
         },
         {
             title : "Jets",
-            link : '/jets'
+            link : '/jets',
+            image : img_1
         }
-    ]
+    ],
+    newsLetter_intro_text : "Receive the beautifully curated selection of what’s trending in luxury with inside stories and tips from our experts"
 }

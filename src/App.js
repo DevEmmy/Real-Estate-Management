@@ -1,15 +1,12 @@
 import './App.css';
-import Banner from './Components/Globals/Banner';
-import Footer from './Components/Globals/Footer';
-import Nav from './Components/Globals/Nav';
+import LandingPage from './Components/Others/LandingPage';
+
 
 
 function App() {
   return (
     <div>
-      <Nav />
-      <Banner />
-      <Footer />
+      <LandingPage />
     </div>
   );
 }
