@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 3rem;
 }
 
 body{
@@ -32,6 +33,11 @@ body{
 
 .nav_item{
   cursor: pointer;
+  font-size: 0.3rem;
+}
+
+.nav_item{
+
 }
 
 .nav_item:hover{
@@ -54,7 +60,7 @@ body{
 .banner{
   width: 95%;
   margin: 30px auto;
-  padding: 100px 150px 300px 100px;
+  padding: 130px 150px 300px 100px;
   border-radius: 50px;
   object-fit: cover;
   background-position: center;
@@ -63,12 +69,13 @@ body{
 }
 
 .banner > h1{
-  font-size: 60px;
+  font-size: 1rem;
 }
 
 .banner > p{
-  font-size: 20px;
+  font-size: 0.35rem;
   width: 50%;
+  margin-top: 10px;
 }
 
 /* Footer */
@@ -130,6 +137,7 @@ body{
 
 .featured_categories > h1{
   font-weight: 500;
+  font-size: 0.4rem;
 }
 
 .category{
@@ -173,10 +181,12 @@ body{
 
 .news_letter > .news_text_container > h1{
   font-weight: 600;
+  font-size: 00.4rem;
 }
 
 .news_letter > .news_text_container > p{
   color: rgb(100,100,100);
+  font-size: 00.25rem;
 }
 
 .newsLetter_form{
@@ -206,4 +216,137 @@ body{
 
 .newsLetter_form > input:focus{
   outline: none;
+}
+
+/* Auth Compo */
+.authSwitch{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.other_auth{
+  text-align: center;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+.auth_component{
+  width: 50%;
+  margin: 10vh auto;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid rgb(180,180,180);
+}
+
+.auth_callback{
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+
+.auth_callback > form{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.auth_callback > form > input{
+  border: 1px solid rgb(180,180,180);
+  padding: 12px 20px;
+  font-size: 17px;
+}
+
+.auth_callback > form > input[type="button"]{
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.auth_callback > form > input:focus{
+  outline: none;
+}
+
+.nav_compo > h3{
+  font-size: 0.4rem;
+}
+
+
+@media screen and (max-width: 500px){
+  .nav_compo{
+    padding: 20px 20px;
+    display: block;
+  }
+
+  .nav_items{
+    display: none;
+  }
+
+  .banner{
+    padding: 100px 30px 60px 30px;
+    border-radius: 30px;
+  }
+
+  .banner > h1{
+    font-size: 0.7rem;
+  }
+
+  .banner > p{
+    width: 80%;
+  }
+
+  .categories_container{
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .category{
+    height: 6cm;
+  }
+
+  .category:hover{
+    transform: scale(1.05);
+  }
+
+  .news_letter{
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .news_letter > .newsLetter_form > input{
+    padding: 8px 10px;
+    font-size: 0.3rem;
+  }
+
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer > .footer_1 > h3, .footer_2 > h3, .footer_3> h3{
+    font-size: 0.3rem;
+  }
+
+  .footer_items, .footer_1 > p{
+    font-size: 0.23rem;
+  }
+
+  .copyright{
+    font-size: 0.2rem;
+    padding: 0;
+  }
+
+  .footer_item{
+    font-size: 0.3rem;
+  }
+  
+  
 }

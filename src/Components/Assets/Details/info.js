@@ -18,7 +18,7 @@ export const info = {
         },
         {
             title : "Sign In/Up",
-            link : "/sign-in",
+            link : "/auth",
         },
         
     ],

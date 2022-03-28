@@ -1,5 +1,6 @@
 import React from 'react'
 import {info}  from "../Assets/Details/info"
+import { Link } from 'react-router-dom'
 
 function Nav() {
   return (
@@ -8,9 +9,12 @@ function Nav() {
       <div className="nav_items">
         {info.nav_items.map((item)=>{
           return(
-            <p className={ item.title === ("Sign In/Up") ? 'nav_item block' : "nav_item"}>
-              {item.title}
-            </p>
+            <Link to={item.link ? `${item.link}` : "/"}>
+              <p className={ item.title === ("Sign In/Up") ? 'nav_item block' : "nav_item"}>
+                {item.title}
+              </p>
+            </Link>
+            
           )
         })}
       </div>
