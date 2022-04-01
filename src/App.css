@@ -93,7 +93,7 @@ body{
   font-weight: 600;
   border: 1px solid;
   padding: 10px;
-  font-size: 17px;
+  font-size: 0.3rem;
 }
 
 /* .footer_1, .footer_2, .footer_3{
@@ -110,11 +110,13 @@ body{
   display: grid;
   grid-template-rows: 1fr;
   gap: 10px;
+  font-size: 0.3rem;
 }
 
 .footer_item{
   cursor: pointer;
   display: inline-flex;
+  font-size: 0.3rem;
 }
 
 .footer_item:hover{
@@ -181,12 +183,12 @@ body{
 
 .news_letter > .news_text_container > h1{
   font-weight: 600;
-  font-size: 00.4rem;
+  font-size: 0.5rem;
 }
 
 .news_letter > .news_text_container > p{
   color: rgb(100,100,100);
-  font-size: 00.25rem;
+  font-size: 00.29rem;
 }
 
 .newsLetter_form{
@@ -203,7 +205,7 @@ body{
 .newsLetter_form > input[type="email"]{
   padding: 12px 20px;
   border: 1px solid rgb(200,200,200);
-  font-size: 20px;
+  font-size: 0.25rem;
   color: rgb(180,180,180);
 }
 
@@ -211,7 +213,7 @@ body{
   background-color: black;
   color: white;
   border: none;
-  font-size: 18px;
+  font-size: 0.25rem;
 }
 
 .newsLetter_form > input:focus{
@@ -222,11 +224,17 @@ body{
 .authSwitch{
   text-decoration: underline;
   cursor: pointer;
+  font-size: .3rem;
 }
 
 .other_auth{
   text-align: center;
 }
+
+.other_auth > p{
+  font-size: .3rem;
+}
+
 
 a{
   color: black;
@@ -246,6 +254,10 @@ a{
   display: grid;
   grid-template-rows: 1fr;
   gap: 20px;
+}
+
+.auth_callback > h3{
+  font-size: .5rem;
 }
 
 .auth_callback > form{
@@ -275,11 +287,24 @@ a{
   font-size: 0.4rem;
 }
 
+.head-nav{
+  font-size: 0.02rem;
+}
 
-@media screen and (max-width: 500px){
+.nav-head-container > h3{
+  font-size: 0.2rem;
+}
+
+.nav-menu > li{
+  font-size: 0.2rem;
+}
+
+@media screen and (max-width: 800px){
   .nav_compo{
     padding: 20px 20px;
-    display: block;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    gap: 50px;
   }
 
   .nav_items{
@@ -336,7 +361,7 @@ a{
   }
 
   .footer_items, .footer_1 > p{
-    font-size: 0.23rem;
+    font-size: 0.3rem;
   }
 
   .copyright{
@@ -348,5 +373,43 @@ a{
     font-size: 0.3rem;
   }
   
+  /* Mobile Nav */
+  .head-nav{
+    position: absolute;
+    z-index: 9999999;
+    background: black;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    padding: 20px 10%;
+    transition: .4s;
+  }
+
+  .head-nav > .nav-head-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+
+  .head-nav > .nav-head-container > h3{
+    font-size: 28px;
+  }
+
+  .head-nav > .nav-menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-top: 100px;
+  }
+
+  .head-nav > .nav-menu > a > li{
+    list-style-type: none;
+    margin-left: 0;
+    font-size: 0.3rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: white;
+  }
   
 }

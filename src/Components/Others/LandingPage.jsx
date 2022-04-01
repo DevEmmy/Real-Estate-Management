@@ -1,13 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Nav from '../Globals/Nav'
 import Banner from '../Globals/Banner'
 import Footer from '../Globals/Footer'
 import { info } from '../Assets/Details/info'
 
 function LandingPage() {
+
+  let [width, setWidth] = useState(window.innerWidth)
+
+  const setSize = ()=>{
+      setWidth(window.innerWidth)
+      console.log(width)
+  }
+  useEffect(() => {
+   window.addEventListener('resize', setSize)
+   return ()=>{ 
+       console.log(width)
+      window.removeEventListener('resize', setSize)
+   }
+  
+  }, []);
+
   return (
     <div>
-      <Nav />
+      <Nav width = {width}/>
+
       <Banner />
 
       <div className="featured_categories">
