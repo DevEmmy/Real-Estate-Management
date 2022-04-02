@@ -2,7 +2,7 @@ import img from "../Images/3..jpeg"
 import img_1 from "../Images/4.jpg"
 
 export const info = {
-    name: 'King David Elite',
+    name: 'King David Elites',
     nav_items : [
         {
             title:"About",
@@ -11,6 +11,10 @@ export const info = {
         {
             title : "Real Estate",
             link : '/real-estate'
+        },
+        {
+            title: "Cars",
+            link : "/cars"
         },
         {
             title: "Latest",
