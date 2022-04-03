@@ -24,7 +24,7 @@ function RealEstate() {
 
 
     const fetchRealEstate = async ()=>{
-      const resp = await fetch('http://localhost:1337/api/real-estate-houses?populate=*')
+      const resp = await fetch('https://real-estate-be-api.herokuapp.com/api/real-estate-houses?populate=*')
       const data = await resp.json()
       console.log(data.data)
       setListing(data.data)
