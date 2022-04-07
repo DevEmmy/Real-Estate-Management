@@ -9,8 +9,8 @@ export const sub = {
         str : 'land'
     },
     {
-        title: "Houses",
-        str : 'houses'
+        title: "House",
+        str : 'house'
     },
     {
         title : "Shortlets",

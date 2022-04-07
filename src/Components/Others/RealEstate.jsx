@@ -6,6 +6,7 @@ import Nav from '../Globals/Nav'
 
 function RealEstate() {
   const [listing, setListing] = useState([])
+  const [filter, setFilter] = useState('All')
 
     let [width, setWidth] = useState(window.innerWidth)
 
@@ -45,7 +46,8 @@ function RealEstate() {
             {
               sub.realEstate.map((cat)=>{
                 return(
-                  <div className="filter">
+                  <div className="filter" onClick={()=>setFilter(`${cat.title}`)}>
+                    { console.log(filter) }
                       {cat.title}
                   </div>
                 )
@@ -56,8 +58,25 @@ function RealEstate() {
           <div className="real_estate_main">
             <h2>Real Estate</h2>
             <div className="main_listing">
-              {
-                listing.map((list)=>{
+              { filter === "All" ?
+                listing?.map((list)=>{
+                  return(
+                    <div className='list'>
+                      <img src={list.attributes.media.data[0].attributes.url} alt="" />
+                      <div className="list_text">
+                        <h3>{list.attributes.title}</h3>
+                        <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6>
+                        <p>
+                          {list.attributes.description}
+                        </p>
+                      </div>
+                    </div>
+                  )
+                })
+
+                : 
+
+                listing?.filter((list)=> list.attributes.real_estate_subcategory.data.attributes.category === filter).map((list)=>{
                   return(
                     <div className='list'>
                       <img src={list.attributes.media.data[0].attributes.url} alt="" />
