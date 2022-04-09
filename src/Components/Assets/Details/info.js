@@ -21,6 +21,10 @@ export const info = {
             link : "/latest"
         },
         {
+            title : "Blog",
+            link: "/blog"
+        },
+        {
             title : "Sign In/Up",
             link : "/auth",
         },

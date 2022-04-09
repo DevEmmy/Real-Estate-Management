@@ -3,6 +3,7 @@ import Nav from '../Globals/Nav'
 import Banner from '../Globals/Banner'
 import Footer from '../Globals/Footer'
 import { info } from '../Assets/Details/info'
+import MinorBlog from '../Globals/MinorBlog'
 
 function LandingPage() {
 
@@ -41,6 +42,8 @@ function LandingPage() {
         
       </div>
 
+      <MinorBlog />
+
       <div className="news_letter">
         <div className="news_text_container">
           <h1>Weekly News Letter</h1>
@@ -52,6 +55,7 @@ function LandingPage() {
           <input type="button" value="SUBSCRIBE" />
         </form>
       </div>
+
       <Footer />
     </div>
   )

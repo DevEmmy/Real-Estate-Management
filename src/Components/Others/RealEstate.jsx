@@ -1,8 +1,10 @@
 import React, { useState, useEffect }  from 'react'
+import { apiURLs } from '../Assets/Details/api'
 import { sub } from '../Assets/Details/subcategory'
 import Banner from '../Globals/Banner'
 import Footer from '../Globals/Footer'
 import Nav from '../Globals/Nav'
+
 
 function RealEstate() {
   const [listing, setListing] = useState([])
@@ -25,7 +27,7 @@ function RealEstate() {
 
 
     const fetchRealEstate = async ()=>{
-      const resp = await fetch('https://real-estate-be-api.herokuapp.com/api/real-estate-houses?populate=*')
+      const resp = await fetch(apiURLs.fetchRealEstate)
       const data = await resp.json()
       console.log(data.data)
       setListing(data.data)

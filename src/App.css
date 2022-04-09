@@ -446,6 +446,22 @@ a{
   font-size: 0.5rem;
 }
 
+/* Minor Blog */
+.minor_blog{
+  width: 90%;
+  margin: 30px auto;
+}
+
+.minor_blog > h2{
+  font-size: 0.6rem;
+}
+
+.minor_blog_post_container{
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+}
 
 @media screen and (max-width: 800px){
   .nav_compo{
