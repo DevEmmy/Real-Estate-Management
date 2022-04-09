@@ -7,6 +7,10 @@ import {
 } from 'react-router-dom'
 import Auth from './Components/Others/Auth';
 import RealEstate from './Components/Others/RealEstate';
+import Cars from './Components/Others/Cars';
+import Latest from './Components/Others/Latest';
+import About from './Components/Others/About';
+import PageError from './Components/Globals/PageError';
 
 
 
@@ -17,6 +21,10 @@ function App() {
         <Route exact path='/' element={<LandingPage />} />
         <Route path='/auth' element={<Auth />}/> 
         <Route path='/real-estate' element={<RealEstate />} />
+        <Route path='/cars' element={<Cars />} />
+        <Route path='/latest' element={<Latest />} />
+        <Route path='/about' element={<About />} />
+        <Route path="*" element={<PageError />} />
       </Routes>
       
     </Router>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {info} from "../Assets/Details/info"
 
 function Footer() {
@@ -16,7 +17,9 @@ function Footer() {
                 {info.nav_items.filter((item)=>item.title !== "Sign In/Up").map((item)=>{
                     return(
                         <div className="footer_item">
+                            <Link to={item.link}>
                             {item.title}
+                            </Link>
                         </div>
                     )
                 })}
@@ -29,7 +32,9 @@ function Footer() {
                 { info.categories.map((item)=>{
                     return(
                         <div className="footer_item">
-                            { item.title }
+                            <Link to={item.link}>
+                            {item.title}
+                            </Link>
                         </div>
                     )
                 })}

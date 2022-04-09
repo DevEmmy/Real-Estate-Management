@@ -1,10 +1,9 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer from '../Globals/Footer'
 import Nav from '../Globals/Nav'
 
-function About() {
-
-  let [width, setWidth] = useState(window.innerWidth)
+function Latest() {
+    let [width, setWidth] = useState(window.innerWidth)
 
   const setSize = ()=>{
       setWidth(window.innerWidth)
@@ -20,13 +19,13 @@ function About() {
   }, []);
 
   return (
-    <div className='about_component'>
-      <Nav width = {width}/>
+    <div className='latest_compo'>
+        <Nav width = {width}/>
 
 
-      <Footer />
+        <Footer />
     </div>
   )
 }
 
-export default About
+export default Latest

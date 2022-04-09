@@ -22,7 +22,8 @@ body{
   left: 0;
   right: 0;
   z-index: 999;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(30px);
 }
 
 .nav_items{
@@ -58,10 +59,9 @@ body{
 
 /* Banner */
 .banner{
-  width: 95%;
-  margin: 30px auto;
-  padding: 130px 150px 300px 100px;
-  border-radius: 50px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 130px 150px 150px 100px;
   object-fit: cover;
   background-position: center;
   color: white;
@@ -69,7 +69,7 @@ body{
 }
 
 .banner > h1{
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .banner > p{
@@ -117,10 +117,15 @@ body{
   cursor: pointer;
   display: inline-flex;
   font-size: 0.3rem;
+  padding-left: 10px;
 }
 
 .footer_item:hover{
   text-decoration: underline;
+}
+
+.footer_item > a {
+  font-size: 0.3rem;
 }
 
 /* Footer Categories */
@@ -355,8 +360,7 @@ a{
 .filter{
   font-size: 0.27rem;
   padding: 7px 17px;
-  border: 2px solid black;
-  border-radius: 30px;
+  border: 1px dotted black;
   cursor: pointer;
   transition: .1s;
 }
@@ -421,6 +425,26 @@ a{
   padding: 20px;
 }
 
+
+
+
+/* 404 Page */
+.page_error{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(100,100,100);
+}
+
+.page_error > h1{
+  font-size: 2.8rem;
+}
+
+.page_error > p{
+  font-size: 0.5rem;
+}
 
 
 @media screen and (max-width: 800px){
