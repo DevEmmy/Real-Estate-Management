@@ -11,9 +11,11 @@ function MinorBlog() {
         <div className="minor_blog_post_container">
             {
                 blog?.map(()=>{
-                    <div className='minor_blog_post'>
+                    return(
+                        <div className='minor_blog_post'>
                         
                     </div>
+                    )
                 })
             }
         </div>

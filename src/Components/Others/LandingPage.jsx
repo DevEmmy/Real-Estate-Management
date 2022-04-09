@@ -4,6 +4,7 @@ import Banner from '../Globals/Banner'
 import Footer from '../Globals/Footer'
 import { info } from '../Assets/Details/info'
 import MinorBlog from '../Globals/MinorBlog'
+import MinorLatest from '../Globals/MinorLatest'
 
 function LandingPage() {
 
@@ -41,6 +42,8 @@ function LandingPage() {
         </div>
         
       </div>
+
+      <MinorLatest />
 
       <MinorBlog />
 

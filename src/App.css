@@ -463,6 +463,24 @@ a{
   gap: 30px;
 }
 
+/* Minor Latest */
+.minor_latest{
+  width: 90%;
+  margin: 20px auto;
+}
+
+.minor_latest > h2{
+  font-size: 0.6rem;
+}
+
+.minor_latest_listings{
+  overflow-x: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 @media screen and (max-width: 800px){
   .nav_compo{
     padding: 20px 20px;
