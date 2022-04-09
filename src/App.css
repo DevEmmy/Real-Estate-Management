@@ -481,6 +481,8 @@ a{
   gap: 20px;
 }
 
+
+
 @media screen and (max-width: 800px){
   .nav_compo{
     padding: 20px 20px;
