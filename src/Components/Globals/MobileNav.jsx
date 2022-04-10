@@ -14,7 +14,7 @@ function MobileNav({pro, left}) {
                 { info.nav_items.map((item)=>{
 
                     return(
-                        <Link to={item.link}>
+                        <Link to={item.link} key={item.id}>
                             <li>{item.title}</li>
                         </Link>
                         

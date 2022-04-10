@@ -10,9 +10,9 @@ function MinorBlog() {
         <h2>Blog Posts</h2>
         <div className="minor_blog_post_container">
             {
-                blog?.map(()=>{
+                blog?.map((item)=>{
                     return(
-                        <div className='minor_blog_post'>
+                        <div className='minor_blog_post' key={item.id}>
                         
                     </div>
                     )

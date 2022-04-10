@@ -16,7 +16,7 @@ function Footer() {
             <div className="footer_items">
                 {info.nav_items.filter((item)=>item.title !== "Sign In/Up").map((item)=>{
                     return(
-                        <div className="footer_item">
+                        <div className="footer_item" key={item.id}>
                             <Link to={item.link}>
                             {item.title}
                             </Link>

@@ -48,8 +48,7 @@ function RealEstate() {
             {
               sub.realEstate.map((cat)=>{
                 return(
-                  <div className="filter" onClick={()=>setFilter(`${cat.title}`)}>
-                    { console.log(filter) }
+                  <div className="filter" onClick={()=>setFilter(`${cat.title}`)} key={cat.id}>
                       {cat.title}
                   </div>
                 )
@@ -63,7 +62,7 @@ function RealEstate() {
               { filter === "All" ?
                 listing?.map((list)=>{
                   return(
-                    <div className='list'>
+                    <div className='list' key={list.id}>
                       <img src={list.attributes.media.data[0].attributes.url} alt="" />
                       <div className="list_text">
                         <h3>{list.attributes.title}</h3>
@@ -80,7 +79,7 @@ function RealEstate() {
 
                 listing?.filter((list)=> list.attributes.real_estate_subcategory.data.attributes.category === filter).map((list)=>{
                   return(
-                    <div className='list'>
+                    <div className='list' key={list.id}>
                       <img src={list.attributes.media.data[0].attributes.url} alt="" />
                       <div className="list_text">
                         <h3>{list.attributes.title}</h3>

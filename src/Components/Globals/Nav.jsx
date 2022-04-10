@@ -16,7 +16,7 @@ function Nav({width}) {
       { width > 800 ? <div className="nav_items">
         {info.nav_items.map((item)=>{
           return(
-            <Link to={item.link ? `${item.link}` : "/"}>
+            <Link to={item.link ? `${item.link}` : "/"}  key={item.id}>
               <p className={ item.title === ("Sign In/Up") ? 'nav_item block' : "nav_item"}>
                 {item.title}
               </p>

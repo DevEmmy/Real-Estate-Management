@@ -8,9 +8,9 @@ function MinorLatest() {
 
         <div className="minor_latest_listings">
             {
-                latest.map(()=>{
+                latest.map((item)=>{
                     return(
-                        <div className="minor_latest_list">
+                        <div className="minor_latest_list" key={item.id}>
                             
                         </div>
                     )

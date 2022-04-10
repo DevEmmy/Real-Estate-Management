@@ -6,25 +6,36 @@ export const info = {
     nav_items : [
         {
             title:"About",
-            link : '/about' 
+            link : '/about',
+            id: 1, 
         },
         {
+            id: 2,
             title : "Real Estate",
             link : '/real-estate'
         },
         {
+            id: 3,
             title: "Cars",
             link : "/cars"
         },
         {
+            id: 4,
+            title: "Combo Deals",
+            link: "/combo-deals"
+        },
+        {
+            id: 5,
             title: "Latest",
             link : "/latest"
         },
         {
+            id:6,
             title : "Blog",
             link: "/blog"
         },
         {
+            id: 7,
             title : "Sign In/Up",
             link : "/auth",
         },
@@ -37,21 +48,25 @@ export const info = {
     copyright : "2022 &copy; All right reserved",
     categories : [
         {
+            id: 1,
             title : "Real Estate",
             link : "/real-estate",
             image : img_1
         },
         {
+            id: 2,
             title : "Cars",
             link : "/cars",
             image : img_1
         },
         {
+            id: 3,
             title : "Yatch",
             link : "/yatch",
             image : img_1
         },
         {
+            id: 4,
             title : "Jets",
             link : '/jets',
             image : img_1

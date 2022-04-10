@@ -34,7 +34,7 @@ function LandingPage() {
         <div className="categories_container">
           {info.categories.map((item)=>{
           return(
-            <div className='category' style={{background: `url(${item.image})`}}>
+            <div className='category' style={{background: `url(${item.image})`}} key={item.id}>
               <h3>{item.title}</h3>
             </div>
           )
