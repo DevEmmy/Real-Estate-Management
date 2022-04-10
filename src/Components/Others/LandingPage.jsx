@@ -5,9 +5,17 @@ import Footer from '../Globals/Footer'
 import { info } from '../Assets/Details/info'
 import MinorBlog from '../Globals/MinorBlog'
 import MinorLatest from '../Globals/MinorLatest'
+import { useDispatch, useSelector } from 'react-redux'
 
 function LandingPage() {
 
+  const width0 = useSelector(state=> state.width.width);
+
+  console.log(width0);
+  const dispath = useDispatch()
+
+  // dispath(width.setSize)
+  
   let [width, setWidth] = useState(window.innerWidth)
 
   const setSize = ()=>{
