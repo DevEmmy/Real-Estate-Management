@@ -5,10 +5,13 @@ import Footer from '../Globals/Footer'
 import { info } from '../Assets/Details/info'
 import MinorBlog from '../Globals/MinorBlog'
 import MinorLatest from '../Globals/MinorLatest'
+import Loader from '../Globals/Loader'
 
 function LandingPage() {
 
   let [width, setWidth] = useState(window.innerWidth)
+
+  let [display, setDisplay] = useState(false)
 
   const setSize = ()=>{
       setWidth(window.innerWidth)
@@ -23,9 +26,18 @@ function LandingPage() {
   
   }, []);
 
+  const displayContent = ()=>{
+    setTimeout(()=>setDisplay(true), 3000)
+  }
+
+  displayContent();
+
   return (
     <div>
-      <Nav width = {width}/>
+
+      {
+        display &&  <>
+<Nav width = {width}/>
 
       <Banner />
 
@@ -60,6 +72,9 @@ function LandingPage() {
       </div>
 
       <Footer />
+       </>
+      }
+      {!display && <Loader />}
     </div>
   )
 }
