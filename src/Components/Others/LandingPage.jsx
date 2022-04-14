@@ -5,12 +5,18 @@ import Footer from '../Globals/Footer'
 import { info } from '../Assets/Details/info'
 import MinorBlog from '../Globals/MinorBlog'
 import MinorLatest from '../Globals/MinorLatest'
+<<<<<<< HEAD
 import { useDispatch, useSelector } from 'react-redux'
 import { widthAction } from '../../store/widthSlice'
+=======
+import Loader from '../Globals/Loader'
+>>>>>>> fd895c8f3a8ee52d590f3ab2d9a262a1f813e2ba
 
 function LandingPage() {
 
   let [width, setWidth] = useState(window.innerWidth)
+
+  let [display, setDisplay] = useState(false)
 
   const setSize = ()=>{
       setWidth(window.innerWidth)
@@ -25,9 +31,18 @@ function LandingPage() {
   
   }, []);
 
+  const displayContent = ()=>{
+    setTimeout(()=>setDisplay(true), 3000)
+  }
+
+  displayContent();
+
   return (
     <div>
-      <Nav width = {width}/>
+
+      {
+        display &&  <>
+<Nav width = {width}/>
 
       <Banner />
 
@@ -62,6 +77,9 @@ function LandingPage() {
       </div>
 
       <Footer />
+       </>
+      }
+      {!display && <Loader />}
     </div>
   )
 }
