@@ -425,7 +425,22 @@ a{
   padding: 20px;
 }
 
+/* Carousel */
+.carousel{
+  height: 400px;
+  width: 80%;
+  margin: 0 auto 150px;
+}
 
+.carousel > h2{
+  font-size: 0.5rem;
+  padding: 30px;
+}
+
+.latest{
+  width: 90%;
+  margin: 10px auto;
+}
 
 
 /* 404 Page */

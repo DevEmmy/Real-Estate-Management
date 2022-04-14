@@ -2,8 +2,10 @@ import React, { useState, useEffect }  from 'react'
 import { apiURLs } from '../Assets/Details/api'
 import { sub } from '../Assets/Details/subcategory'
 import Banner from '../Globals/Banner'
+import CarouselContainer from '../Globals/CarouselContainer'
 import Footer from '../Globals/Footer'
 import Nav from '../Globals/Nav'
+
 
 
 function RealEstate() {
@@ -37,6 +39,9 @@ function RealEstate() {
       fetchRealEstate()
     }, [])
   
+    const truncate =  (str)=> {
+      return str.length > 10 ? str.substring(0, 100) + "..." : str;
+  }
   return (
     <div>
         <Nav width = {width}/>
@@ -66,9 +71,9 @@ function RealEstate() {
                       <img src={list.attributes.media.data[0].attributes.url} alt="" />
                       <div className="list_text">
                         <h3>{list.attributes.title}</h3>
-                        <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6>
+                        {/* <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6> */}
                         <p>
-                          {list.attributes.description}
+                        {truncate(list.attributes.description)}
                         </p>
                       </div>
                     </div>
@@ -83,9 +88,9 @@ function RealEstate() {
                       <img src={list.attributes.media.data[0].attributes.url} alt="" />
                       <div className="list_text">
                         <h3>{list.attributes.title}</h3>
-                        <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6>
+                        {/* <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6> */}
                         <p>
-                          {list.attributes.description}
+                          {truncate(list.attributes.description)}
                         </p>
                       </div>
                     </div>
@@ -95,10 +100,8 @@ function RealEstate() {
             </div>
           </div>
           
-          <h2>New & Trending</h2>
-          <div className="listing">
-
-          </div>
+          
+              <CarouselContainer />
         </div>
 
 

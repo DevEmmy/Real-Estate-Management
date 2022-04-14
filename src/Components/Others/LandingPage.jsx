@@ -5,12 +5,10 @@ import Footer from '../Globals/Footer'
 import { info } from '../Assets/Details/info'
 import MinorBlog from '../Globals/MinorBlog'
 import MinorLatest from '../Globals/MinorLatest'
-<<<<<<< HEAD
 import { useDispatch, useSelector } from 'react-redux'
 import { widthAction } from '../../store/widthSlice'
-=======
 import Loader from '../Globals/Loader'
->>>>>>> fd895c8f3a8ee52d590f3ab2d9a262a1f813e2ba
+import CarouselContainer from '../Globals/CarouselContainer'
 
 function LandingPage() {
 
@@ -60,7 +58,10 @@ function LandingPage() {
         
       </div>
 
-      <MinorLatest />
+        <div className="latest">
+          <CarouselContainer />
+        </div>
+      
 
       <MinorBlog />
 
@@ -75,6 +76,7 @@ function LandingPage() {
           <input type="button" value="SUBSCRIBE" />
         </form>
       </div>
+
 
       <Footer />
        </>

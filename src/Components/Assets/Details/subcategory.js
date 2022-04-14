@@ -17,8 +17,8 @@ export const sub = {
     },
     {
         id: 4,
-        title : "Shortlets",
-        str: 'shortlets'
+        title : "Shortlet",
+        str: 'shortlet'
     }
     ]
      

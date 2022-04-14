@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Footer from '../Globals/Footer'
 import Nav from '../Globals/Nav'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 function Latest() {
     let [width, setWidth] = useState(window.innerWidth)
@@ -21,6 +23,7 @@ function Latest() {
   return (
     <div className='latest_compo'>
         <Nav width = {width}/>
+
 
 
         <Footer />
