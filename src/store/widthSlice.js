@@ -5,11 +5,7 @@ const widthSlice = createSlice({
     initialState: {width : window.innerWidth},
     reducers : {  
         setSize(state){
-            // window.addEventListener('resize', (state)=>state.width = window.innerWidth)
-            // return ()=>{ 
-            //     console.log(state.width)
-            //     window.removeEventListener('resize', (state)=>state.width = window.innerWidth)
-            // }
+            state.width = window.innerWidth;
             console.log(state.width)
         },
       }
