@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {info}  from "../Assets/Details/info"
 import { Link } from 'react-router-dom'
 import { MenuAlt3Icon } from '@heroicons/react/solid'
@@ -7,6 +7,22 @@ import MobileNav from './MobileNav'
 function Nav({width}) {
 
   const [nav, setNav] = useState(false)
+
+  var [ height, setHeight ] = useState(0)
+  
+  const setSize = ()=>{
+    setHeight(window.innerHeight)
+    console.log(height)
+}
+useEffect(() => {
+ window.addEventListener('scroll', setSize)
+ return ()=>{ 
+     console.log(height)
+    window.removeEventListener('scroll', setSize)
+ }
+
+}, []);
+
 
   return (
     <div className='nav_compo'>

@@ -3,8 +3,8 @@ import React from 'react'
 function PageError() {
   return (
     <div className='page_error'>
-        <h1>404</h1>
-        <p>The Page you requested cannot be Found</p>
+        <h1>Page Under Construction!</h1>
+        <p>Come to this page later</p>
     </div>
   )
 }

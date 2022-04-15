@@ -3,10 +3,11 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
-  background: rgba(250,250,250);
+  background: rgba(240,240,240);
 }
 
 /* Nav Component Styles */
@@ -17,7 +18,7 @@ body{
   grid-template-columns: 1fr 2fr;
   gap: 200px;
   /* box-shadow: 0 7px 100px rgba(0,0,0,0.25); */
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -38,8 +39,8 @@ body{
   font-size: 0.3rem;
 }
 
-.nav_item{
-
+.nav_items > a{
+  color: white;
 }
 
 .nav_item:hover{
@@ -389,13 +390,22 @@ a{
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   gap: 50px;
-  margin-top: 30px;
+  width: 88%;
+  margin: 30px auto;
 }
 
 .list{
   display: grid;
-  border: 1px solid rgb(100,100,100);
+  /* border: 1px solid rgb(100,100,100); */
+  border-radius: 10px;
   font-size: 0.01rem;
+  background-color: white;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.list:hover{
+  box-shadow:  0 13px 30px rgba(0,0,0,0.18);
 }
 
 .list > .list_text > h3{
@@ -420,6 +430,7 @@ a{
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
 .list_text{
