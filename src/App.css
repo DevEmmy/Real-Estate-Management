@@ -63,7 +63,7 @@ body{
 .banner{
   width: 100%;
   margin: 0px auto;
-  padding: 130px 150px 150px 100px;
+  padding: 130px 150px 200px 100px;
   object-fit: cover;
   background-position: center;
   color: white;
@@ -626,6 +626,9 @@ a{
   height: auto;
 }
 
+.scroll_down_icon{
+  display: none;
+}
 
 @media screen and (max-width: 800px){
   .nav_compo{
@@ -642,14 +645,26 @@ a{
   .banner{
     padding: 100px 30px 60px 30px;
     border-radius: 0px;
+    height: 100vh;
+  }
+
+  .scroll_down_icon{
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    
   }
 
   .banner > h1{
-    font-size: 0.7rem;
+    font-size: 1.7rem;
+    text-align: center;
+
   }
 
   .banner > p{
-    width: 80%;
+    width: 100%;
+    font-size: 0.5rem;
+    text-align: center;
   }
 
   .categories_container{
