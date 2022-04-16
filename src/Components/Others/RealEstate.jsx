@@ -9,7 +9,7 @@ import Nav from '../Globals/Nav'
 
 
 function RealEstate() {
-  const [listing, setListing] = useState([])
+  const [listing, setListing] = useState()
   const [filter, setFilter] = useState('All')
 
     let [width, setWidth] = useState(window.innerWidth)

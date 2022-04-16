@@ -650,13 +650,13 @@ a{
 
   .scroll_down_icon{
     display: flex;
-    margin-top: 100px;
+    margin-top: 30px;
     justify-content: center;
     
   }
 
   .banner > h1{
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     text-align: center;
 
   }
