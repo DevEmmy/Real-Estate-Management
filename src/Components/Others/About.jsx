@@ -23,6 +23,7 @@ function About() {
     <div className='about_component'>
       <Nav width = {width}/>
 
+      
 
       <Footer />
     </div>

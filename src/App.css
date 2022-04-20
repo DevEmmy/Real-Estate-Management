@@ -155,6 +155,8 @@ body{
   position: relative;
   cursor: pointer;
   transition: .3s;
+  background-position: center;
+  object-fit: contain;
 }
 
 .category > h3{
