@@ -1,22 +1,34 @@
-import React, { useState } from 'react'
+import React,{ useState } from 'react'
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import { info } from '../Assets/Details/info.js';
 
 function MinorLatest() {
     const [latest, setLatest] = useState([])
   return (
-    <div className='minor_latest'>
-        <h2>New & Latest</h2>
+    <div className='carousel'>
+        <h2>New & Trending</h2>
+        <Carousel width="100%" autoPlay={true} infiniteLoop={true} showThumbs={false}>
+            <div className="img">
+                <img src={info.banner_img} alt="" />
+            </div>
 
-        <div className="minor_latest_listings">
-            {
-                latest.map((item)=>{
-                    return(
-                        <div className="minor_latest_list" key={item.id}>
-                            
-                        </div>
-                    )
-                })
-            }
-        </div>
+            <div className="img">
+                <img src={info.banner_img} alt="" />
+            </div>
+
+            <div className="img">
+                <img src={info.banner_img} alt="" />
+            </div>
+
+            <div className="img">
+                <img src={info.banner_img} alt="" />
+            </div>
+
+            <div className="img">
+                <img src={info.banner_img} alt="" />
+            </div>
+        </Carousel>
     </div>
   )
 }

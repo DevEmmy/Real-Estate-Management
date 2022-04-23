@@ -2,7 +2,6 @@ import React, { useState, useEffect }  from 'react'
 import { apiURLs } from '../Assets/Details/api'
 import { sub } from '../Assets/Details/subcategory'
 import Banner from '../Globals/Banner'
-import CarouselContainer from '../Globals/CarouselContainer'
 import Footer from '../Globals/Footer'
 import Nav from '../Globals/Nav'
 
@@ -100,8 +99,7 @@ function RealEstate() {
             </div>
           </div>
           
-          
-              <CarouselContainer />
+      
         </div>
 
 

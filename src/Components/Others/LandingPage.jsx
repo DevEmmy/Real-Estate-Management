@@ -8,7 +8,6 @@ import MinorLatest from '../Globals/MinorLatest'
 import { useDispatch, useSelector } from 'react-redux'
 import { widthAction } from '../../store/widthSlice'
 import Loader from '../Globals/Loader'
-import CarouselContainer from '../Globals/CarouselContainer'
 
 function LandingPage() {
 
@@ -59,7 +58,7 @@ function LandingPage() {
       </div>
 
         <div className="latest">
-          <CarouselContainer />
+          <MinorLatest />
         </div>
       
 
