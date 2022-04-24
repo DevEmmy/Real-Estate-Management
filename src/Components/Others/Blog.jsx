@@ -24,9 +24,10 @@ function Blog() {
     <div className='blog'>
         <Nav width = {width}/>
 
-        <div className="blog_top_section">
-          { blog.indexOf(0)}
-          <img src={ blog.indexOf(1).img} alt="" />
+        <div className="blog_top_section" style={{backgroundImage: `linear-gradient(rgb(0,0,0,0.3), rgba(0,0,0,0.7)), url(${ blog[0].img})`}}>
+         <h2>
+           Blogs
+         </h2>
         </div>
 
           <div className="main_blogs_container">

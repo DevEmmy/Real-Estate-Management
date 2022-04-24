@@ -7,11 +7,12 @@ import {
 } from 'react-router-dom'
 import Auth from './Components/Others/Auth';
 import RealEstate from './Components/Others/RealEstate';
-import Cars from './Components/Others/Cars';
+import Cars from  './Components/Others/Cars';
 import Latest from './Components/Others/Latest';
 import About from './Components/Others/About';
 import PageError from './Components/Globals/PageError';
 import Blog from './Components/Others/Blog';
+import SpecificBlog from './Components/Others/SpecificBlog';
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/latest' element={<Latest />} />
         <Route path='/about' element={<About />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/blog/:id' element={<SpecificBlog />} />
         <Route path="*" element={<PageError />} />
       </Routes>
       
