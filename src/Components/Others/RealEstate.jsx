@@ -4,6 +4,7 @@ import { sub } from '../Assets/Details/subcategory'
 import Banner from '../Globals/Banner'
 import Footer from '../Globals/Footer'
 import Nav from '../Globals/Nav'
+import MinorLatest from "../Globals/MinorLatest"
 
 
 
@@ -69,7 +70,7 @@ function RealEstate() {
                     <div className='list' key={list.id}>
                       <img src={list.attributes.media.data[0].attributes.url} alt="" />
                       <div className="list_text">
-                        <h3>{list.attributes.title}</h3>
+                        <h3>${list.attributes.price}</h3>
                         {/* <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6> */}
                         <p>
                         {truncate(list.attributes.description)}
@@ -86,10 +87,11 @@ function RealEstate() {
                     <div className='list' key={list.id}>
                       <img src={list.attributes.media.data[0].attributes.url} alt="" />
                       <div className="list_text">
-                        <h3>{list.attributes.title}</h3>
+                        <h3>${list.attributes.price}</h3>
                         {/* <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6> */}
                         <p>
                           {truncate(list.attributes.description)}
+                          
                         </p>
                       </div>
                     </div>
@@ -98,7 +100,8 @@ function RealEstate() {
               }
             </div>
           </div>
-          
+
+            <MinorLatest />
       
         </div>
 

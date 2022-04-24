@@ -8,6 +8,7 @@ import MinorLatest from '../Globals/MinorLatest'
 import { useDispatch, useSelector } from 'react-redux'
 import { widthAction } from '../../store/widthSlice'
 import Loader from '../Globals/Loader'
+import { Link } from 'react-router-dom'
 
 function LandingPage() {
 
@@ -29,7 +30,7 @@ function LandingPage() {
   }, []);
 
   const displayContent = ()=>{
-    setTimeout(()=>setDisplay(true), 3000)
+    setTimeout(()=>setDisplay(true), 0)
   }
 
   displayContent();
@@ -48,9 +49,12 @@ function LandingPage() {
         <div className="categories_container">
           {info.categories.map((item)=>{
           return(
-            <div className='category' style={{background: `url(${item.image})`}} key={item.id}>
-              <h3>{item.title}</h3>
-            </div>
+            <Link to={item.link}>
+              <div className='category' style={{background: `url(${item.image})`}} key={item.id}>
+                <h3>{item.title}</h3>
+              </div>
+            </Link>
+            
           )
         })}
         </div>

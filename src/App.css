@@ -11,6 +11,9 @@ body{
 }
 
 /* Nav Component Styles */
+.blog > .nav_compo{
+  color: black;
+}
 .nav_compo{
   width: 100%;
   padding: 20px 60px;
@@ -42,6 +45,10 @@ body{
 .nav_items > a{
   color: white;
 }
+
+/* .blog > .nav_items > a{
+  color: black;
+} */
 
 .nav_item:hover{
   text-decoration: underline;
@@ -155,6 +162,8 @@ body{
   position: relative;
   cursor: pointer;
   transition: .3s;
+  background-position: center;
+  object-fit: contain;
 }
 
 .category > h3{
@@ -360,8 +369,8 @@ a{
 }
 
 .filter{
-  font-size: 0.27rem;
-  padding: 7px 17px;
+  font-size: 0.3rem;
+  padding: 10px 18px;
   border: 1px dotted black;
   cursor: pointer;
   transition: .1s;
@@ -424,6 +433,7 @@ a{
   font-size: 0.3rem;
   font-weight: 300;
   padding-top: 10px;
+  color: gray;
 }
 
 .list > img{
@@ -446,7 +456,7 @@ a{
 
 .carousel > h2{
   font-size: 0.5rem;
-  padding: 30px;
+  padding: 10px 0;
 }
 
 .latest{
@@ -485,9 +495,25 @@ a{
 
 .minor_blog_post_container{
   display: grid;
-  grid-template-columns: 5fr 1fr;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 4fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr;
   gap: 30px;
+}
+
+.minor_blog_post{
+  font-size: 0.4rem;
+}
+
+.minor_blog_post > img{
+  width: 100%;
+}
+
+.blog_texts > h4{
+  font-size: .4rem;
+}
+
+.blog_texts > p{
+  font-size: .3rem;
 }
 
 /* Minor Latest */
@@ -630,6 +656,52 @@ a{
   display: none;
 }
 
+.blog{
+
+}
+
+.main_blogs_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.main_blog_post{
+  font-size: 0.4rem;
+  cursor: pointer;
+  background-color: white;
+}
+
+.main_blog_post > img{
+  width: 100%;
+  /* height: 200px;
+  object-fit: cover; */
+}
+
+.main_blog_post > .main_blog_texts{
+  margin: 0;
+  padding: 0;
+}
+
+.main_blog_texts{
+  font-size: 0.2rem;
+}
+
+.main_blog_texts > h4{
+  font-size: 0.3rem;
+  padding: 2px 20px;
+}
+
+.main_blog_texts > h4:hover{
+  text-decoration: underline;
+}
+
+.main_blog_texts > p{
+  font-size: 0.24rem;
+  padding: 2px 20px 30px;
+}
 @media screen and (max-width: 800px){
   .nav_compo{
     padding: 20px 20px;
@@ -770,5 +842,10 @@ a{
   .main_listing{
     display: flex;
     flex-direction: column;
+  }
+
+  .minor_blog_post_container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }

@@ -1,5 +1,9 @@
 import img from "../Images/3..jpeg"
 import img_1 from "../Images/4.jpg"
+import estate from "../static/estate.jpg"
+import car from "../static/car.jpg"
+import yatch from "../static/yatch.jpg"
+import jet from "../static/jet.jpg"
 
 export const info = {
     name: 'King David Elites',
@@ -51,25 +55,25 @@ export const info = {
             id: 1,
             title : "Real Estate",
             link : "/real-estate",
-            image : img_1
+            image : estate
         },
         {
             id: 2,
             title : "Cars",
             link : "/cars",
-            image : img_1
+            image : car
         },
         {
             id: 3,
             title : "Yatch",
             link : "/yatch",
-            image : img_1
+            image : yatch
         },
         {
             id: 4,
             title : "Jets",
             link : '/jets',
-            image : img_1
+            image : jet
         }
     ],
     newsLetter_intro_text : "Receive the beautifully curated selection of what’s trending in luxury with inside stories and tips from our experts"
