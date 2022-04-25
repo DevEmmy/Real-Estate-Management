@@ -5,6 +5,7 @@ import Banner from '../Globals/Banner'
 import Footer from '../Globals/Footer'
 import Nav from '../Globals/Nav'
 import MinorLatest from "../Globals/MinorLatest"
+import { Link } from 'react-router-dom'
 
 
 
@@ -67,16 +68,18 @@ function RealEstate() {
               { filter === "All" ?
                 listing?.map((list)=>{
                   return(
-                    <div className='list' key={list.id}>
-                      <img src={list.attributes.media.data[0].attributes.url} alt="" />
-                      <div className="list_text">
-                        <h3>${list.attributes.price}</h3>
-                        {/* <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6> */}
-                        <p>
-                        {truncate(list.attributes.description)}
-                        </p>
+                    <Link to={`/real-estate/${list.id}`}>
+                      <div className='list' key={list.id}>
+                        <img src={list.attributes.media.data[0].attributes.url} alt="" />
+                        <div className="list_text">
+                          <h3>${list.attributes.price}</h3>
+                          {/* <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6> */}
+                          <p>
+                          {truncate(list.attributes.description)}
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   )
                 })
 
@@ -84,17 +87,18 @@ function RealEstate() {
 
                 listing?.filter((list)=> list.attributes.real_estate_subcategory.data.attributes.category === filter).map((list)=>{
                   return(
-                    <div className='list' key={list.id}>
-                      <img src={list.attributes.media.data[0].attributes.url} alt="" />
-                      <div className="list_text">
-                        <h3>${list.attributes.price}</h3>
-                        {/* <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6> */}
-                        <p>
+                    <Link to={`/real-estate/${list.id}`}>
+                      <div className='list' key={list.id}>
+                        <img src={list.attributes.media.data[0].attributes.url} alt="" />
+                        <div className="list_text">
+                          <h3>${list.attributes.price}</h3>
+                          {/* <h6>Category : { list.attributes.real_estate_subcategory.data.attributes.category}</h6> */}
+                          <p>
                           {truncate(list.attributes.description)}
-                          
-                        </p>
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   )
                 })
               }

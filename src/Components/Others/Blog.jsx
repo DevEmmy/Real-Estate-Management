@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Footer from '../Globals/Footer'
 import Nav from '../Globals/Nav'
 import blog from '../Assets/Details/blog'
+import { Link } from 'react-router-dom'
 
 function Blog() {
 
@@ -34,13 +35,16 @@ function Blog() {
           {
                 blog?.map((item)=>{
                     return(
+
+                      <Link to={`/blog/${item.id}`}>
                         <div className='main_blog_post' key={item.id}>
-                        <img src={item.img} alt="" />
-                        <div className="main_blog_texts">
-                            <h4>{item.title}</h4>
-                            <p>{item.content}</p>
+                          <img src={item.img} alt="" />
+                          <div className="main_blog_texts">
+                              <h4>{item.title}</h4>
+                              <p>{item.content}</p>
+                          </div>
                         </div>
-                    </div>
+                      </Link>
                     )
                 })
             }

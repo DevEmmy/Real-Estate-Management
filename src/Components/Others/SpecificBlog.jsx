@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import blog from '../Assets/Details/blog'
+import Footer from '../Globals/Footer'
 
 function SpecificBlog() {
 
@@ -18,6 +19,8 @@ function SpecificBlog() {
           
           
         )})}
+
+        <Footer />
     </div>
   )
 }

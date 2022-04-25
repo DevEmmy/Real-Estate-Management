@@ -13,6 +13,7 @@ import About from './Components/Others/About';
 import PageError from './Components/Globals/PageError';
 import Blog from './Components/Others/Blog';
 import SpecificBlog from './Components/Others/SpecificBlog';
+import SpecificRE from './Components/Others/SpecificRE';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path='/' element={<LandingPage />} />
         <Route path='/auth' element={<Auth />}/> 
         <Route path='/real-estate' element={<RealEstate />} />
+        <Route path='/real-estate/:id' element={<SpecificRE /> } />
         <Route path='/cars' element={<Cars />} />
         <Route path='/latest' element={<Latest />} />
         <Route path='/about' element={<About />} />
