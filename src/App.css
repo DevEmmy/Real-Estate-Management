@@ -731,11 +731,39 @@ a{
 
 /* Specific Listing */
 .sp_list{
-
+  
 }
+
+.list_title{
+  font-size: 1.8rem;
+  padding: 180px 100px;
+  color: white;
+  font-weight: 900;
+}
+
+.list_option{
+  font-size: 0.3rem;
+  padding-top: 2vh;
+  padding-left: 100px;
+  display: flex;
+  gap: 70px;
+}
+
+.opt{
+  font-size: 0.3rem;
+  display:inline-flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 36px;
+  cursor: pointer;
+}
+
 .spl_top_section{
-  height: 500px;
+  height: 90vh;
   width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .sp_list > img{
